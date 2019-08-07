@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="415b60ff-27ad-46d6-b8f4-1387937d4ffa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/api/admin/article/ArticleCRUDAdminApi.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Game_RPG/src/main/java/com/slowv/fxglgames/RPG/CharacterAnimation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Game_RPG/src/main/java/com/slowv/fxglgames/RPG/RpgApp.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Game_RPG/src/main/java/com/slowv/fxglgames/RPG/ZephFactory.java" afterDir="false" />
@@ -74,6 +72,26 @@
       <change afterPath="$PROJECT_DIR$/../../web_pring/src/main/java/annotation/Id.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../web_pring/src/main/java/annotation/Table.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../web_pring/src/main/java/annotation/Unique.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/datastore-indexes-auto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/local_db.bin" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/local_db.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/article/ArticleApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/article/ArticleApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/category/CategoryApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/category/CategoryApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article$Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article$Status.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Category$Builder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Category$Builder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/admin/article/ArticleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/admin/article/ArticleApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/admin/article/ArticleCRUDAdminApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/admin/source/SourceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/admin/source/SourceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/CrawlerSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/CrawlerSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ResponseJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ResponseJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NewGame/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewGame/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NewGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NewGame/src/main/WEB-INF/js/myJs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewGame/src/main/WEB-INF/js/myJs/index.js" afterDir="false" />
@@ -94,23 +112,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/ArticleApi.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/source/SourceApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-119">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="403">
+              <caret line="90" column="41" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,22 +125,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/ArticleCRUDAdminApi.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entity/CrawlerSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/Article.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="332">
+              <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -145,8 +139,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/entity/Category.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+            <state relative-caret-position="184">
+              <caret line="140" column="20" selection-start-line="140" selection-start-column="20" selection-end-line="140" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="159" column="9" lean-forward="true" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -163,8 +169,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>isEmpty()</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -185,19 +196,22 @@
         <option value="$PROJECT_DIR$/src/main/java/controller/admin/source/SourceApi.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/appengine-web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/util/StringUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/CrawlerSource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/entity/ResponseJson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/api/admin/source/SourceApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/crawler/AddTaskToQueue.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/crawler/GetTaskToQueue.java" />
         <option value="$PROJECT_DIR$/web/WEB-INF/cron.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/admin/article/AriticleCRUDAdminApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/admin/article/ArticleCRUDAdminApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Article.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/ArticleTypeToJSON.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/entity/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/ResponseJson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/api/admin/article/ArticleApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/api/admin/article/ArticleDetailApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/api/admin/category/CategoryDetailApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/CrawlerSource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/api/admin/source/SourceApi.java" />
       </list>
     </option>
   </component>
@@ -233,6 +247,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,7 +299,26 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="source" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="crawler" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
@@ -298,14 +333,39 @@
               <item name="SERVER" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,7 +375,7 @@
     <property name="ACTIVE_CLOUD_PROJECT_NUMBER" value="308750705338" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565099341718" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565157016780" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -441,24 +501,26 @@
       <workItem from="1564829314119" duration="1043000" />
       <workItem from="1564830450591" duration="189000" />
       <workItem from="1564831259538" duration="3842000" />
-      <workItem from="1565098272341" duration="1063000" />
+      <workItem from="1565098272341" duration="3731000" />
+      <workItem from="1565148534122" duration="8466000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29990000" />
+    <option name="totallyTimeSpent" value="41124000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1386" height="788" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27224737" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919486" visible="true" weight="0.27760968" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
+      <window_info id="Web" order="7" sideWeight="0.50080514" side_tool="true" weight="0.27760968" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5185185" />
@@ -467,7 +529,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.63607085" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.7648953" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -570,27 +632,10 @@
     <entry file="file://$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/local_db.bin">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="27" column="5" selection-start-line="19" selection-end-line="27" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ResponseJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -604,37 +649,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/source/SourceApi.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cron.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="22" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="204">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/filter/ObjectifyRegisterFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="355">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/cron.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/ArticleCRUDAdminApi.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="374">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/googlecode/objectify/objectify/5.1.22/objectify-5.1.22.jar!/com/googlecode/objectify/cmd/Loader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -648,20 +694,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/entity/CrawlerSource.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="82" column="18" selection-start-line="82" selection-start-column="18" selection-end-line="82" selection-end-column="18" />
+        <state relative-caret-position="374">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ArticleTypeToJSON.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="57" lean-forward="true" selection-start-line="25" selection-start-column="57" selection-end-line="25" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#977#1464#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/category/CategoryDetailApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/ArticleDetailApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ResponseJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="66" column="41" selection-start-line="66" selection-start-column="41" selection-end-line="66" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/ArticleApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="144" column="26" selection-start-line="144" selection-start-column="26" selection-end-line="144" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/api/crawler/GetTaskToQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
+        <state relative-caret-position="406">
           <caret line="58" column="130" selection-start-line="58" selection-start-column="130" selection-end-line="58" selection-end-column="130" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -671,18 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Article.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+        <state relative-caret-position="221">
+          <caret line="29" column="5" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -691,28 +770,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="68" column="10" selection-start-line="68" selection-start-column="10" selection-end-line="68" selection-end-column="10" />
+        <state relative-caret-position="184">
+          <caret line="140" column="20" selection-start-line="140" selection-start-column="20" selection-end-line="140" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/ArticleCRUDAdminApi.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/category/CategoryApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="273">
+          <caret line="159" column="9" lean-forward="true" selection-start-line="159" selection-start-column="9" selection-end-line="159" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/ArticleApi.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/CrawlerSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="332">
+          <caret line="41" column="69" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/source/SourceApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="90" column="41" selection-start-line="90" selection-start-column="41" selection-end-line="90" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

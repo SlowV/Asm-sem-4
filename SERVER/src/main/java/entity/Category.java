@@ -32,7 +32,7 @@ public class Category {
         this.status = Status.ACTIVE.getCode();
     }
 
-    public enum Status{
+    public enum Status {
         ACTIVE(1), DEACTIVE(0), DELETED(-1);
         int code;
 
@@ -40,33 +40,34 @@ public class Category {
             this.code = code;
         }
 
-        public int getCode(){
+        public int getCode() {
             return code;
         }
 
-        public static CrawlerSource.Status findByCode(int code){
-            for (CrawlerSource.Status status : CrawlerSource.Status.values()){
+        public static CrawlerSource.Status findByCode(int code) {
+            for (CrawlerSource.Status status : CrawlerSource.Status.values()) {
                 if (status.code == code) return status;
             }
             throw new IllegalArgumentException("Kiểu trạng thái không tồn tại!");
         }
     }
 
-    public void setStatus(CrawlerSource.Status status){
-        if (status== null){
+    public void setStatus(CrawlerSource.Status status) {
+        if (status == null) {
             status = CrawlerSource.Status.DEACTIVE;
         }
         this.status = status.getCode();
     }
 
-    public HashMap<String, String> validCategory(){
+    public HashMap<String, String> validCategory() {
         HashMap<String, String> errors = new HashMap<>();
-        if(this.name.isEmpty()) errors.put("name", String.format(StringUtil.FIELD_EMPTY_ERROR_MSG, "Ten danh muc"));
-        if(this.description.isEmpty()) errors.put("description", String.format(StringUtil.FIELD_EMPTY_ERROR_MSG, "Mo ta danh muc"));
+        if (this.name.isEmpty()) errors.put("name", String.format(StringUtil.FIELD_EMPTY_ERROR_MSG, "Ten danh muc"));
+        if (this.description.isEmpty())
+            errors.put("description", String.format(StringUtil.FIELD_EMPTY_ERROR_MSG, "Mo ta danh muc"));
         return errors;
     }
 
-    public boolean isDeactiveAndDeleted(){
+    public boolean isDeactiveAndDeleted() {
         return this.status == Article.Status.DEACTIVE.getCode() || this.status == Article.Status.DELETED.getCode();
     }
 
@@ -135,8 +136,9 @@ public class Category {
         return status;
     }
 
-    public void setStatus(int status) {
+    public Category setStatus(int status) {
         this.status = status;
+        return this;
     }
 
     public static final class Builder {

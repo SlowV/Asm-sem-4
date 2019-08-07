@@ -16,7 +16,15 @@
         <servlet-name>ListArticle</servlet-name>
         <url-pattern>/api/v1/articles</url-pattern>
     </servlet-mapping>
-
+    <!-- Article Detail-->
+    <servlet>
+        <servlet-name>ArticleDetailApi</servlet-name>
+        <servlet-class>api.admin.article.ArticleDetailApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ArticleDetailApi</servlet-name>
+        <url-pattern>/api/v1/article/detail</url-pattern>
+    </servlet-mapping>
 
     <!-- CATEGORY -->
     <!--List Category-->
@@ -28,6 +36,16 @@
         <servlet-name>ListCategory</servlet-name>
         <url-pattern>/api/v1/categories</url-pattern>
     </servlet-mapping>
+    <!--Category Detail-->
+    <servlet>
+        <servlet-name>CategoryDetailApi</servlet-name>
+        <servlet-class>api.admin.category.CategoryDetailApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CategoryDetailApi</servlet-name>
+        <url-pattern>/api/v1/category/detail</url-pattern>
+    </servlet-mapping>
+
 
     <!--Create Category-->
     <servlet>

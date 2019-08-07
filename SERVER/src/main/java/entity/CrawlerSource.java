@@ -30,6 +30,19 @@ public class CrawlerSource {
     @Index
     private int status;
 
+    public CrawlerSource setNewCrawlerSource(CrawlerSource source){
+        this.url = source.getUrl();
+        this.linkSelector = source.getLinkSelector();
+        this.linkLimit = source.getLinkLimit();
+        this.titleSelector = source.getTitleSelector();
+        this.descriptionSelector = source.getDescriptionSelector();
+        this.contentSelector = source.getContentSelector();
+        this.authorSelector = source.getAuthorSelector();
+        this.thumbnailSelector = source.getThumbnailSelector();
+        this.updatedAtMLS = Calendar.getInstance().getTimeInMillis();
+        return this;
+    }
+
     public CrawlerSource() {
         long now = Calendar.getInstance().getTimeInMillis();
         this.id = now;
@@ -63,6 +76,10 @@ public class CrawlerSource {
             status = Status.DEACTIVE;
         }
         this.status = status.getCode();
+    }
+
+    public boolean isDeactiveAndDeleted(){
+        return this.status == Article.Status.DEACTIVE.getCode() || this.status == Article.Status.DELETED.getCode();
     }
 
     public HashMap<String, String> validSource(){

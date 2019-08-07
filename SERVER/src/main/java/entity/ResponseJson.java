@@ -3,16 +3,16 @@ package entity;
 import com.google.gson.Gson;
 
 public class ResponseJson {
-    private int stauts;
+    private int status;
     private String message;
     private Object obj;
 
-    public int getStauts() {
-        return stauts;
+    public int getStatus() {
+        return status;
     }
 
-    public void setStauts(int stauts) {
-        this.stauts = stauts;
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public String getMessage() {
@@ -36,7 +36,7 @@ public class ResponseJson {
     }
 
     public static final class Builder {
-        private int stauts;
+        private int status;
         private String message;
         private Object obj;
 
@@ -47,8 +47,8 @@ public class ResponseJson {
             return new Builder();
         }
 
-        public Builder setStauts(int stauts) {
-            this.stauts = stauts;
+        public Builder setStatus(int status) {
+            this.status = status;
             return this;
         }
 
@@ -64,7 +64,7 @@ public class ResponseJson {
 
         public ResponseJson build() {
             ResponseJson responseJson = new ResponseJson();
-            responseJson.setStauts(stauts);
+            responseJson.setStatus(status);
             responseJson.setMessage(message);
             responseJson.setObj(obj);
             return responseJson;

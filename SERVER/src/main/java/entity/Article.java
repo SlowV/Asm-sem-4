@@ -25,6 +25,10 @@ public class Article {
     @Load
     private Ref<Category> category;
 
+    public boolean isDeactiveAndDeleted(){
+        return this.status == Article.Status.DEACTIVE.getCode() || this.status == Article.Status.DELETED.getCode();
+    }
+
     public Article() {
         long now = Calendar.getInstance().getTimeInMillis();
         this.createdAtMLS = now;
