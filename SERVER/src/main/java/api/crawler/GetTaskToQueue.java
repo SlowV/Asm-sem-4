@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
@@ -50,15 +51,19 @@ public class GetTaskToQueue extends HttpServlet {
             for (Element element: elements) {
                 content.append(element.text());
             }
+
             String author = document.select(crawlerSource.getAuthorSelector()).text();
             String thumbnail = document.select(crawlerSource.getThumbnailSelector()).attr("src").trim();
-
+            if (content.toString().isEmpty() || title.isEmpty() || description.isEmpty()) return;
+            if (thumbnail.isEmpty()) {
+                thumbnail = "https://resources.overdrive.com/wp-content/uploads/doc-thmb.jpg";
+            }
             // tu dong tao moi category neu chua co! => chuc nag dang phat trien, tam thoi fix cung truoc.
             article.setTitle(title).setDescription(description).setContent(content.toString())
-                    .setAuthor(author).setThumbnail(thumbnail)
+                    .setAuthor(author).setThumbnail(thumbnail).setStatus(Article.Status.DEACTIVE.getCode())
+                    .setCreatedAtMLS(Calendar.getInstance().getTimeInMillis()).setUpdatedAtMLS(Calendar.getInstance().getTimeInMillis())
                     .setCategory(Ref.create(Key.create(Category.class, ofy().load().type(Category.class).list().get(0).getId())));
             LOGGER.info(article.toString());
-            if (article.checkNull()) return;
             ofy().save().entity(article).now();
         }
     }

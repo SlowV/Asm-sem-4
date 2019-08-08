@@ -38,6 +38,7 @@ public class CategoryApi extends HttpServlet {
                         .setMessage(StringUtil.INVALID_MSG)
                         .build().parserToJson());
                 LOGGER.log(Level.WARNING, String.format("ERROR: %s", ex.getMessage()));
+                return;
             }
             System.out.println("Status: " + status);
             if (status == Category.Status.ACTIVE.getCode()) {

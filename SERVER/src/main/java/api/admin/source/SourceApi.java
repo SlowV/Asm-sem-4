@@ -11,7 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
@@ -86,6 +88,42 @@ public class SourceApi extends HttpServlet {
         resp.setStatus(HttpServletResponse.SC_CREATED);
         resp.getWriter().println(ResponseJson.Builder.aResponseJson()
                 .setStatus(HttpServletResponse.SC_CREATED)
+                .setMessage(StringUtil.SUCCESS_MSG)
+                .setObj(ofy().save().entity(sourceExist).now())
+                .build().parserToJson());
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String strSourceId = req.getParameter("sourceId");
+        long sourceId = 0;
+        try{
+            sourceId = Long.parseLong(strSourceId);
+        }catch (NumberFormatException ex){
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().println(ResponseJson.Builder.aResponseJson()
+                    .setStatus(HttpServletResponse.SC_BAD_REQUEST)
+                    .setMessage(StringUtil.INVALID_MSG)
+                    .build().parserToJson());
+            LOGGER.log(Level.WARNING, String.format("ERROR: %s", ex.getMessage()));
+            return;
+        }
+
+        CrawlerSource sourceExist = ofy().load().type(CrawlerSource.class).id(sourceId).now();
+
+        if (sourceExist == null || sourceExist.isDeactiveAndDeleted()){
+            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            resp.getWriter().println(ResponseJson.Builder.aResponseJson()
+                    .setStatus(HttpServletResponse.SC_BAD_REQUEST)
+                    .setMessage(String.format(StringUtil.NOT_FOUND_MSG, "ID source"))
+                    .build().parserToJson());
+            return;
+        }
+        sourceExist.setStatus(CrawlerSource.Status.DELETED.getCode());
+        sourceExist.setDeletedAtMLS(Calendar.getInstance().getTimeInMillis());
+        resp.setStatus(HttpServletResponse.SC_OK);
+        resp.getWriter().println(ResponseJson.Builder.aResponseJson()
+                .setStatus(HttpServletResponse.SC_OK)
                 .setMessage(StringUtil.SUCCESS_MSG)
                 .setObj(ofy().save().entity(sourceExist).now())
                 .build().parserToJson());

@@ -3,6 +3,7 @@ package api.admin.article;
 import com.google.gson.Gson;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Ref;
+import com.sun.org.apache.xpath.internal.operations.Number;
 import dto.ArticleDTO;
 import entity.Article;
 import entity.ArticleTypeToJSON;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import static com.googlecode.objectify.ObjectifyService.ofy;
@@ -28,13 +30,40 @@ public class ArticleApi extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Article> articleList = ofy().load().type(Article.class).list();
         List<ArticleDTO> articleDTOList = new ArrayList<>();
+        String strLimit = req.getParameter("limit");
+        String strStatus = req.getParameter("status");
+        int limit = 9;
+        int status = 1;
+        if(!strLimit.isEmpty()){
+            try{
+                limit = Integer.parseInt(strLimit);
+            }catch (NumberFormatException ex){
+                LOGGER.log(Level.WARNING, ex.getMessage());
+            }
+        }
+
+        if (!strStatus.isEmpty()){
+            try{
+                status = Integer.parseInt(strStatus);
+            }catch (NumberFormatException ex){
+                LOGGER.log(Level.WARNING, ex.getMessage());
+            }
+        }
+
+        List<Article> articleList = ofy().load().type(Article.class)
+                .limit(limit)
+                .order("-createdAtMLS")
+                .filter("status", status).list();
         for (Article article : articleList) {
             articleDTOList.add(new ArticleDTO(article));
         }
         resp.setStatus(HttpServletResponse.SC_OK);
-        resp.getWriter().println(new Gson().toJson(articleDTOList));
+        resp.getWriter().println(ResponseJson.Builder.aResponseJson()
+                .setStatus(HttpServletResponse.SC_OK)
+                .setMessage(StringUtil.SUCCESS_MSG)
+                .setObj(articleDTOList)
+                .build().parserToJson());
     }
 
     @Override

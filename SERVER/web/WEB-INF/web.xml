@@ -5,6 +5,27 @@
          version="2.5">
 
     <!--====================== SERVLET =============================-->
+    <!--ACCOUNT-->
+    <!--Login-->
+    <servlet>
+        <servlet-name>LoginApi</servlet-name>
+        <servlet-class>api.admin.account.LoginApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginApi</servlet-name>
+        <url-pattern>/api/v1/login</url-pattern>
+    </servlet-mapping>
+
+    <!--Register-->
+    <servlet>
+        <servlet-name>RegisterApi</servlet-name>
+        <servlet-class>api.admin.account.AccountApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterApi</servlet-name>
+        <url-pattern>/api/v1/register</url-pattern>
+    </servlet-mapping>
+
 
     <!--ARTICLE-->
     <!-- List Article-->
@@ -16,6 +37,7 @@
         <servlet-name>ListArticle</servlet-name>
         <url-pattern>/api/v1/articles</url-pattern>
     </servlet-mapping>
+
     <!-- Article Detail-->
     <servlet>
         <servlet-name>ArticleDetailApi</servlet-name>
@@ -25,6 +47,17 @@
         <servlet-name>ArticleDetailApi</servlet-name>
         <url-pattern>/api/v1/article/detail</url-pattern>
     </servlet-mapping>
+
+    <!--Auto active article-->
+    <servlet>
+        <servlet-name>AutoActiveArticle</servlet-name>
+        <servlet-class>api.admin.article.AutoActiveArticle</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AutoActiveArticle</servlet-name>
+        <url-pattern>/article/auto/active</url-pattern>
+    </servlet-mapping>
+
 
     <!-- CATEGORY -->
     <!--List Category-->
@@ -121,7 +154,7 @@
     </filter>
     <filter-mapping>
         <filter-name>CorsFilter</filter-name>
-        <url-pattern>*</url-pattern>
+        <url-pattern>/*</url-pattern>
     </filter-mapping>
 
     <!--Objectify-->
@@ -131,7 +164,23 @@
     </filter>
     <filter-mapping>
         <filter-name>ObjectifyFilter</filter-name>
-        <url-pattern>*</url-pattern>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--Admin filter-->
+    <filter>
+        <filter-name>AdminFilter</filter-name>
+        <filter-class>filter.AdminFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AdminFilter</filter-name>
+        <url-pattern>/api/v1/category/*</url-pattern>
+        <url-pattern>/api/v1/categories</url-pattern>
+        <url-pattern>/api/v1/artices</url-pattern>
+        <url-pattern>/api/v1/artice/*</url-pattern>
+        <url-pattern>/api/v1/artice/*</url-pattern>
+        <url-pattern>/api/v1/crawler-sources</url-pattern>
+        <url-pattern>/api/v1/crawler-source/*</url-pattern>
     </filter-mapping>
 
     <!--====================== END FILTER =============================-->

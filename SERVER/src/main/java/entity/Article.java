@@ -11,15 +11,22 @@ import java.util.HashMap;
 public class Article {
     @Id
     private String url;
+    @Index
     private String title;
+    @Index
     private String description;
+    @Index
     private String content;
+    @Index
     private String author;
     private long sourceId;
     private String thumbnail;
+    @Index
     private long createdAtMLS;
+    @Index
     private long updatedAtMLS;
     private long deletedAtMLS;
+    @Index
     private int status;
     @Index
     @Load

@@ -12,6 +12,7 @@ public class ArticleDTO {
     private long sourceId;
     private long createdAtMLS;
     private long updatedAtMLS;
+    private String image;
     private long deletedAtMLS;
     private int status;
     private long categoryId;
@@ -29,7 +30,19 @@ public class ArticleDTO {
         this.categoryName = category.getName();
         this.categoryDescription = category.getDescription();
         this.sourceId = article.getSourceId();
+        this.content = article.getContent();
+        this.description = article.getDescription();
+        this.author = article.getAuthor();
+        this.image = article.getThumbnail();
         this.status = article.getStatus();
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getUrl() {

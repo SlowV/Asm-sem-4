@@ -17,16 +17,16 @@ import static com.googlecode.objectify.ObjectifyService.ofy;
 public class ArticleDetailApi extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Article fromJson = new Gson().fromJson(StringUtil.convertInputStreamToString(req.getInputStream()), Article.class);
+        String articleId = req.getParameter("id");
 
-        if (fromJson == null){
+        if (articleId == null || "".equals(articleId)){
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(ResponseJson.Builder.aResponseJson()
                     .setStatus(HttpServletResponse.SC_BAD_REQUEST)
                     .setMessage(StringUtil.INVALID_MSG)
                     .build().parserToJson());
         }else{
-            Article article = ofy().load().type(Article.class).id(fromJson.getUrl()).now();
+            Article article = ofy().load().type(Article.class).id(articleId).now();
 
             if (article == null || article.isDeactiveAndDeleted()){
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
