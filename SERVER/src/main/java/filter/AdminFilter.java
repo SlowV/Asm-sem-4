@@ -21,41 +21,42 @@ public class AdminFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         response.setCharacterEncoding("UTF-8");
         response.setContentType("application/json");
-        if (request.getMethod().equals("POST") || request.getMethod().equals("PUT") || request.getMethod().equals("DELETE")){
-            HttpSession session = request.getSession();
-            String token = request.getHeader("Authorization");
-            if (token != null){
-                if (token.contains("Basic ")){
-                    String[] splitted = token.split("\\s{1,}");
-                    System.out.println(splitted[1]);
-                    if (session.getAttribute("token").equals(splitted[1])){
-                        filterChain.doFilter(servletRequest, servletResponse);
-                    }else{
-                        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                        response.getWriter().println(ResponseJson.Builder.aResponseJson()
-                                .setStatus(HttpServletResponse.SC_UNAUTHORIZED)
-                                .setMessage(StringUtil.NOT_TOKEN)
-                                .build().parserToJson());
-                    }
+//        if (request.getMethod().equals("POST") || request.getMethod().equals("PUT") || request.getMethod().equals("DELETE")){
+//            HttpSession session = request.getSession();
+//            String token = request.getHeader("Authorization");
+//            if (token != null){
+//                if (token.contains("Basic ")){
+//                    String[] splitted = token.split("\\s{1,}");
+//                    System.out.println(splitted[1]);
+//                    if (session.getAttribute("token").equals(splitted[1])){
+//                        filterChain.doFilter(servletRequest, servletResponse);
+//                    }else{
+//                        response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//                        response.getWriter().println(ResponseJson.Builder.aResponseJson()
+//                                .setStatus(HttpServletResponse.SC_UNAUTHORIZED)
+//                                .setMessage(StringUtil.NOT_TOKEN)
+//                                .build().parserToJson());
+//                    }
+//
+//                }else{
+//                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//                    response.getWriter().println(ResponseJson.Builder.aResponseJson()
+//                            .setStatus(HttpServletResponse.SC_UNAUTHORIZED)
+//                            .setMessage(StringUtil.NOT_TOKEN)
+//                            .build().parserToJson());
+//                }
+//            }else{
+//                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+//                response.getWriter().println(ResponseJson.Builder.aResponseJson()
+//                        .setStatus(HttpServletResponse.SC_UNAUTHORIZED)
+//                        .setMessage(StringUtil.NOT_TOKEN)
+//                        .build().parserToJson());
+//            }
+//        }else{
+//            filterChain.doFilter(servletRequest, servletResponse);
+//        }
 
-                }else{
-                    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                    response.getWriter().println(ResponseJson.Builder.aResponseJson()
-                            .setStatus(HttpServletResponse.SC_UNAUTHORIZED)
-                            .setMessage(StringUtil.NOT_TOKEN)
-                            .build().parserToJson());
-                }
-            }else{
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                response.getWriter().println(ResponseJson.Builder.aResponseJson()
-                        .setStatus(HttpServletResponse.SC_UNAUTHORIZED)
-                        .setMessage(StringUtil.NOT_TOKEN)
-                        .build().parserToJson());
-            }
-        }else{
-            filterChain.doFilter(servletRequest, servletResponse);
-        }
-
+        filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override

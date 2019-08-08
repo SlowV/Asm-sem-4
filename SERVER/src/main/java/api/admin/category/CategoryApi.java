@@ -24,13 +24,11 @@ public class CategoryApi extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        LoadType<Category> categoryLoadType = ofy().load().type(Category.class);
         String strStatus = req.getParameter("status");
-        int status = 100;
-        List<Category> list;
+        int status = 1;
         if (strStatus != null) {
             try {
-                status = Integer.parseInt(strStatus);
+                status = Category.Status.findByCode( Integer.parseInt(strStatus)).getCode();
             } catch (NumberFormatException ex) {
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
                 resp.getWriter().println(ResponseJson.Builder.aResponseJson()
@@ -40,47 +38,14 @@ public class CategoryApi extends HttpServlet {
                 LOGGER.log(Level.WARNING, String.format("ERROR: %s", ex.getMessage()));
                 return;
             }
-            System.out.println("Status: " + status);
-            if (status == Category.Status.ACTIVE.getCode()) {
-                System.out.println("Vao day r ma!");
-                list = categoryLoadType.filter("status", Category.Status.ACTIVE.getCode()).list();
-                resp.setStatus(HttpServletResponse.SC_OK);
-                resp.getWriter().println(ResponseJson.Builder.aResponseJson()
-                        .setStatus(HttpServletResponse.SC_OK)
-                        .setMessage(StringUtil.SUCCESS_MSG)
-                        .setObj(list)
-                        .build().parserToJson());
-                return;
-            }else if (status == Category.Status.DELETED.getCode()) {
-                list = categoryLoadType.filter("status", Category.Status.DELETED.getCode()).list();
-                resp.setStatus(HttpServletResponse.SC_OK);
-                resp.getWriter().println(ResponseJson.Builder.aResponseJson()
-                        .setStatus(HttpServletResponse.SC_OK)
-                        .setMessage(StringUtil.SUCCESS_MSG)
-                        .setObj(list)
-                        .build().parserToJson());
-                return;
-            }else if (status == Category.Status.DEACTIVE.getCode()) {
-                list = categoryLoadType.filter("status", Category.Status.DEACTIVE.getCode()).list();
-                resp.setStatus(HttpServletResponse.SC_OK);
-                resp.getWriter().println(ResponseJson.Builder.aResponseJson()
-                        .setStatus(HttpServletResponse.SC_OK)
-                        .setMessage(StringUtil.SUCCESS_MSG)
-                        .setObj(list)
-                        .build().parserToJson());
-                return;
-            }
-
-            list = categoryLoadType.list();
-            resp.setStatus(HttpServletResponse.SC_OK);
-            resp.getWriter().println(ResponseJson.Builder.aResponseJson()
-                    .setStatus(HttpServletResponse.SC_OK)
-                    .setMessage(StringUtil.SUCCESS_MSG)
-                    .setObj(list)
-                    .build().parserToJson());
-
         }
-
+        List<Category> list = ofy().load().type(Category.class).filter("status", status).list();
+        resp.setStatus(HttpServletResponse.SC_OK);
+        resp.getWriter().println(ResponseJson.Builder.aResponseJson()
+                .setStatus(HttpServletResponse.SC_OK)
+                .setMessage(StringUtil.SUCCESS_MSG)
+                .setObj(list)
+                .build().parserToJson());
     }
 
     @Override

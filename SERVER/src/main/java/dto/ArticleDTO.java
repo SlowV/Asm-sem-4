@@ -18,6 +18,15 @@ public class ArticleDTO {
     private long categoryId;
     private String categoryName;
     private String categoryDescription;
+    private String thumbnail;
+
+    public String getThumbnail() {
+        return thumbnail;
+    }
+
+    public void setThumbnail(String thumbnail) {
+        this.thumbnail = thumbnail;
+    }
 
     public ArticleDTO() {
     }
@@ -41,8 +50,9 @@ public class ArticleDTO {
         return image;
     }
 
-    public void setImage(String image) {
+    public ArticleDTO setImage(String image) {
         this.image = image;
+        return this;
     }
 
     public String getUrl() {
@@ -57,32 +67,36 @@ public class ArticleDTO {
         return title;
     }
 
-    public void setTitle(String title) {
+    public ArticleDTO setTitle(String title) {
         this.title = title;
+        return this;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public ArticleDTO setDescription(String description) {
         this.description = description;
+        return this;
     }
 
     public String getContent() {
         return content;
     }
 
-    public void setContent(String content) {
+    public ArticleDTO setContent(String content) {
         this.content = content;
+        return this;
     }
 
     public String getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public ArticleDTO setAuthor(String author) {
         this.author = author;
+        return this;
     }
 
     public long getSourceId() {
@@ -97,16 +111,39 @@ public class ArticleDTO {
         return createdAtMLS;
     }
 
-    public void setCreatedAtMLS(long createdAtMLS) {
+    public ArticleDTO setCreatedAtMLS(long createdAtMLS) {
         this.createdAtMLS = createdAtMLS;
+        return this;
     }
 
     public long getUpdatedAtMLS() {
         return updatedAtMLS;
     }
 
-    public void setUpdatedAtMLS(long updatedAtMLS) {
+    @Override
+    public String toString() {
+        return "ArticleDTO{" +
+                "url='" + url + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", content='" + content + '\'' +
+                ", author='" + author + '\'' +
+                ", sourceId=" + sourceId +
+                ", createdAtMLS=" + createdAtMLS +
+                ", updatedAtMLS=" + updatedAtMLS +
+                ", image='" + image + '\'' +
+                ", deletedAtMLS=" + deletedAtMLS +
+                ", status=" + status +
+                ", categoryId=" + categoryId +
+                ", categoryName='" + categoryName + '\'' +
+                ", categoryDescription='" + categoryDescription + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
+                '}';
+    }
+
+    public ArticleDTO setUpdatedAtMLS(long updatedAtMLS) {
         this.updatedAtMLS = updatedAtMLS;
+        return this;
     }
 
     public long getDeletedAtMLS() {
@@ -121,31 +158,35 @@ public class ArticleDTO {
         return status;
     }
 
-    public void setStatus(int status) {
+    public ArticleDTO setStatus(int status) {
         this.status = status;
+        return this;
     }
 
     public long getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(long categoryId) {
+    public ArticleDTO setCategoryId(long categoryId) {
         this.categoryId = categoryId;
+        return this;
     }
 
     public String getCategoryName() {
         return categoryName;
     }
 
-    public void setCategoryName(String categoryName) {
+    public ArticleDTO setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+        return this;
     }
 
     public String getCategoryDescription() {
         return categoryDescription;
     }
 
-    public void setCategoryDescription(String categoryDescription) {
+    public ArticleDTO setCategoryDescription(String categoryDescription) {
         this.categoryDescription = categoryDescription;
+        return this;
     }
 }

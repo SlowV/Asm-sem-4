@@ -44,8 +44,8 @@ public class Category {
             return code;
         }
 
-        public static CrawlerSource.Status findByCode(int code) {
-            for (CrawlerSource.Status status : CrawlerSource.Status.values()) {
+        public static Category.Status findByCode(int code) {
+            for (Category.Status status : Category.Status.values()) {
                 if (status.code == code) return status;
             }
             throw new IllegalArgumentException("Kiểu trạng thái không tồn tại!");

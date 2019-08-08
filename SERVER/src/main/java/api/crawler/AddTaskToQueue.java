@@ -45,11 +45,11 @@ public class AddTaskToQueue extends HttpServlet {
             for (Element el : elements) {
 //                if (count == crawlerSource.getLinkLimit()) break;
                 // check link limit.
-                String link = el.attr("href").trim();
-                LOGGER.info(link);
-                if (!link.isEmpty()){
+                StringBuilder link = new StringBuilder(el.attr("href").trim());
+                LOGGER.info(link.toString());
+                if (link.length() > 0){
                     Article article = Article.Builder.anArticle()
-                            .setUrl(link)
+                            .setUrl(link.delete(link.length() - 61, link.length()).toString())
                             .setSourceId(crawlerSource.getId())
                             .build();
                     q.add(TaskOptions.Builder.withMethod(TaskOptions.Method.PULL).payload(new Gson().toJson(article)));
@@ -62,5 +62,12 @@ public class AddTaskToQueue extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doPost(req, resp);
+    }
+
+    public static void main(String[] args) {
+        // 61
+        StringBuilder t = new StringBuilder("https://vnexpress.net/the-gioi/nhung-nong-dan-my-khong-roi-bo-trump-du-tham-don-cua-trung-quoc-3964407.html?vn_source=top6&vn_medium=buildtop&vn_campaign=nonpersonalize");
+        String t1 = "https://vnexpress.net/the-gioi/nhung-nong-dan-my-khong-roi-bo-trump-du-tham-don-cua-trung-quoc-3964407.html?vn_source=top6&vn_medium=buildtop&vn_campaign=nonpersonalize";
+        System.out.println(t.delete(t.length() - 61, t.length()).toString());
     }
 }

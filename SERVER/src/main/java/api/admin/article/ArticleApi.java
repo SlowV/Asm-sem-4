@@ -9,6 +9,10 @@ import entity.Article;
 import entity.ArticleTypeToJSON;
 import entity.Category;
 import entity.ResponseJson;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 import util.StringUtil;
 
 import javax.servlet.ServletException;
@@ -53,8 +57,8 @@ public class ArticleApi extends HttpServlet {
 
         List<Article> articleList = ofy().load().type(Article.class)
                 .limit(limit)
-                .order("-createdAtMLS")
-                .filter("status", status).list();
+                .filter("status", status)
+                .list();
         for (Article article : articleList) {
             articleDTOList.add(new ArticleDTO(article));
         }
@@ -68,22 +72,23 @@ public class ArticleApi extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Article article = new Gson().fromJson(StringUtil.convertInputStreamToString(req.getInputStream()), Article.class);
-
-        HashMap<String, String> map = article.validArticle();
-        // Nếu size > 0 nghĩa là có lỗi.
-        if (map.size() > 0) {
-            resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-            resp.getWriter().println(ResponseJson.Builder.aResponseJson()
-                    .setStatus(HttpServletResponse.SC_BAD_REQUEST)
-                    .setMessage(StringUtil.INVALID_MSG)
-                    .setObj(map)
-                    .build().parserToJson());
+        ArticleDTO article = new Gson().fromJson(StringUtil.convertInputStreamToString(req.getInputStream()), ArticleDTO.class);
+        System.out.println(article.toString());
+        Document document = Jsoup.connect(article.getUrl()).ignoreContentType(true).get();
+        String title = document.select(article.getTitle()).text();
+        String description = document.select(article.getDescription()).text();
+        String content = document.select(article.getContent()).text() ;
+        String author = document.select(article.getAuthor()).text();
+        String thumbnail = document.select(article.getImage()).attr("src").trim();
+        long categoryId = article.getCategoryId();
+        if (content.isEmpty() || title.isEmpty() || description.isEmpty()) return;
+        if (thumbnail.isEmpty()) {
+            thumbnail = "https://resources.overdrive.com/wp-content/uploads/doc-thmb.jpg";
         }
 
         // select category với ID gửi lên == null nghĩa là
         Category categoryExist;
-        if ((categoryExist = ofy().load().type(Category.class).id(article.getCategory().get().getId()).now()) == null
+        if ((categoryExist = ofy().load().type(Category.class).id(categoryId).now()) == null
                 || categoryExist.isDeactiveAndDeleted()) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(ResponseJson.Builder.aResponseJson()
@@ -93,14 +98,17 @@ public class ArticleApi extends HttpServlet {
                     .build().parserToJson());
         }
         assert categoryExist != null;
-        article.setCategory(Ref.create(Key.create(Category.class, categoryExist.getId())));
+        article.setTitle(title).setDescription(description).setContent(content)
+                .setAuthor(author).setImage(thumbnail).setStatus(Article.Status.DEACTIVE.getCode())
+                .setCreatedAtMLS(Calendar.getInstance().getTimeInMillis()).setUpdatedAtMLS(Calendar.getInstance().getTimeInMillis())
+                .setCategoryId(categoryId);
+        LOGGER.info(article.toString());
 
         resp.setStatus(HttpServletResponse.SC_CREATED);
-        Key<Article> articleKey = ofy().save().entity(article).now();
         resp.getWriter().println(ResponseJson.Builder.aResponseJson()
                 .setStatus(HttpServletResponse.SC_CREATED)
                 .setMessage(StringUtil.SUCCESS_MSG)
-                .setObj(articleKey)
+                .setObj(article)
                 .build().parserToJson());
     }
 

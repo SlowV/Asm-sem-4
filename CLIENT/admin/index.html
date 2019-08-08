@@ -1,12 +1,11 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+    <title>Danh sách bài viết</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
@@ -119,9 +118,9 @@
                     <div>
                         <button type="button" class="hamburger close-sidebar-btn hamburger--elastic"
                                 data-class="closed-sidebar">
-                                    <span class="hamburger-box">
-<span class="hamburger-inner"></span>
-                                    </span>
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
                         </button>
                     </div>
                 </div>
@@ -129,21 +128,21 @@
             <div class="app-header__mobile-menu">
                 <div>
                     <button type="button" class="hamburger hamburger--elastic mobile-toggle-nav">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
                     </button>
                 </div>
             </div>
             <div class="app-header__menu">
-                        <span>
-                            <button type="button"
-                                    class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
-                                <span class="btn-icon-wrapper">
-                                    <i class="fa fa-ellipsis-v fa-w-6"></i>
-                                </span>
-                            </button>
+                <span>
+                    <button type="button"
+                            class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                        <span class="btn-icon-wrapper">
+                            <i class="fa fa-ellipsis-v fa-w-6"></i>
                         </span>
+                    </button>
+                </span>
             </div>
             <div class="scrollbar-sidebar">
                 <div class="app-sidebar__inner">
@@ -164,7 +163,7 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="elements-buttons-standard.html">
+                                    <a href="page/create_article.html">
                                         <i class="metismenu-icon"></i>
                                         Thêm mới
                                     </a>
@@ -433,7 +432,7 @@
         // GET articles
         var limit = 5;
         $.ajax({
-            url: URL_GET_LIST_ARTICLE + "?limit=" + limit + '&&status=0',
+            url: URL_GET_LIST_ARTICLE + "?limit=" + limit + '&status=0',
             method: "GET",
             type: "application/json",
             success: function (data) {
@@ -450,7 +449,7 @@
                             '            <div class="widget-content-left mr-3">' +
                             '                <div class="widget-content-left">' +
                             '                    <img class="rounded-circle"' +
-                            '                         src="'+ data.obj[i].image +'" alt="" style="width: 40px; height: 40px; object-fit: cover">' +
+                            '                         src="' + data.obj[i].image + '" alt="" style="width: 40px; height: 40px; object-fit: cover">' +
                             '                </div>' +
                             '            </div>' +
                             '            <a href="#" style="color: #4c5e8c;">' +
@@ -466,10 +465,10 @@
                             '</td>' +
                             '<td class="text-center">' + data.obj[i].categoryName + '</td>' +
                             '<td class="text-center">' +
-                            '    <div class="badge ' + generateClassBadgeFromIntStatus(data.obj[i].status) +'">' + convertStatusIntToString(data.obj[i].status) + '</div>' +
+                            '    <div class="badge ' + generateClassBadgeFromIntStatus(data.obj[i].status) + '">' + convertStatusIntToString(data.obj[i].status) + '</div>' +
                             '</td>' +
                             '<td class="text-center">' +
-                            '    <button type="button" ' + disabledButtonByStauts(data.obj[i].status) +'  id="' + data.obj[i].url +'"  class="btn btn-primary btn-sm btn_duyet_nhanh">' +
+                            '    <button type="button" ' + disabledButtonByStauts(data.obj[i].status) + '  id="' + data.obj[i].url + '"  class="btn btn-primary btn-sm btn_duyet_nhanh">' +
                             '        Duyệt' +
                             '    </button>' +
                             '</td>' +
@@ -495,10 +494,24 @@
     // ================= EVENT CLICK =================
 
     $('#tbody_data_articles').on('click', '.btn_duyet_nhanh', function () {
+        var btn_duyet_nhanh = $(this);
         $.ajax({
-            url: URL_GET_ARTICLE_DETAIL + '?id=' + $(this).attr('id'),
+            url: URL_ACTIVE_ARTICLE + '?id=' + $(this).attr('id'),
             method: 'GET',
             success: function (data) {
+                if (data.status === 200) {
+                    let parent = btn_duyet_nhanh.parent().parent();
+                    let statusClass = parent.find('.badge');
+                    statusClass.removeClass('badge-warning');
+                    statusClass.addClass(generateClassBadgeFromIntStatus(data.obj.status));
+                    statusClass.text('Hoàn thành');
+                    // console.log(btn_duyet_nhanh.parent().parent().html());
+                    console.log(statusClass.html());
+                    btn_duyet_nhanh.attr('disabled', true);
+                    parent.fadeOut(1 * 1000, function () {
+                        parent.remove();
+                    });
+                }
                 console.log(data);
             },
             complete: function (xhr) {
@@ -534,7 +547,7 @@
             return "badge-danger";
         }
     }
-    
+
     function disabledButtonByStauts(status) {
         if (status === 0) {
             return "";

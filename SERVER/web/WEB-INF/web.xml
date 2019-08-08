@@ -48,6 +48,15 @@
         <url-pattern>/api/v1/article/detail</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>ArticleCreateApi</servlet-name>
+        <servlet-class>api.admin.article.ArticleApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ArticleCreateApi</servlet-name>
+        <url-pattern>/api/v1/article/create</url-pattern>
+    </servlet-mapping>
+
     <!--Auto active article-->
     <servlet>
         <servlet-name>AutoActiveArticle</servlet-name>
@@ -58,6 +67,15 @@
         <url-pattern>/article/auto/active</url-pattern>
     </servlet-mapping>
 
+    <!--active article-->
+    <servlet>
+        <servlet-name>ActiveArticle</servlet-name>
+        <servlet-class>api.admin.article.ActiveArticle</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActiveArticle</servlet-name>
+        <url-pattern>/article/active</url-pattern>
+    </servlet-mapping>
 
     <!-- CATEGORY -->
     <!--List Category-->
