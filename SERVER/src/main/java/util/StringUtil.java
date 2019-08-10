@@ -12,7 +12,7 @@ import java.util.Random;
 import java.util.ResourceBundle;
 
 public class StringUtil {
-    public static String QUEUE_NAME = "queue-crawl-source";
+    public static String QUEUE_NAME = "queue-crawl";
     public static String INVALID_MSG = "Du lieu sai!";
     public static String SUCCESS_MSG = "Thanh cong!";
     public static String NOT_FOUND_MSG = "Khong tim thay %s";

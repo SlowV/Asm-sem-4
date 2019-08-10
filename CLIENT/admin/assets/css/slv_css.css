@@ -1,0 +1,48 @@
+.modal-content {
+    overflow-y: auto;
+}
+
+.slv_label_preview {
+    display: none;
+    transition: display .5s;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.slv_label_preview.active {
+    display: block;
+}
+
+.slv_input_preview {
+    font-size: 15px;
+    border: 1px solid #5d5d5d;
+    transition: .5s;
+    font-weight: 400;
+    height: auto !important;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.slv_input_preview:disabled {
+    border: none;
+    outline: none;
+    transition: .5s;
+    background: #fff;
+
+}
+
+.slv_input_preview#titlePre:disabled {
+    font-weight: 600;
+    font-size: 25px;
+}
+
+textarea#contentPre {
+    min-height: 350px;
+}
+#thumbnailPre{
+    width: auto;
+    margin: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+}

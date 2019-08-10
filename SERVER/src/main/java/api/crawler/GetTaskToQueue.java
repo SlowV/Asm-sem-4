@@ -32,7 +32,6 @@ public class GetTaskToQueue extends HttpServlet {
     private static final Logger LOGGER = Logger.getLogger(GetTaskToQueue.class.getSimpleName());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("SlowV");
         List<TaskHandle> tasks = q.leaseTasks(10, TimeUnit.SECONDS, 1);
         if (tasks.size() > 0) {
             TaskHandle taskHandle = tasks.get(0);

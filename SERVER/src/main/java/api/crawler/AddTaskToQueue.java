@@ -38,7 +38,6 @@ public class AddTaskToQueue extends HttpServlet {
 
         for (CrawlerSource crawlerSource : crawlerSources) {
             Document document = Jsoup.connect(crawlerSource.getUrl()).ignoreContentType(true).get();
-            LOGGER.info(crawlerSource.getUrl());
             Elements elements = document.select(crawlerSource.getLinkSelector());
             if (elements.size() == 0) return;
             int count = 0;
@@ -46,22 +45,21 @@ public class AddTaskToQueue extends HttpServlet {
 //                if (count == crawlerSource.getLinkLimit()) break;
                 // check link limit.
                 StringBuilder link = new StringBuilder(el.attr("href").trim());
-                LOGGER.info(link.toString());
                 if (link.length() > 0){
+                    String linkClean = link.toString();
+                    if (linkClean.contains("vn_medium") || linkClean.contains("vn_source") || linkClean.contains("vn_campaign")){
+                        linkClean = link.delete(link.length() - 61, link.length()).toString();
+                    }
                     Article article = Article.Builder.anArticle()
-                            .setUrl(link.delete(link.length() - 61, link.length()).toString())
+                            .setUrl(linkClean)
                             .setSourceId(crawlerSource.getId())
                             .build();
+                    System.out.println(linkClean);
                     q.add(TaskOptions.Builder.withMethod(TaskOptions.Method.PULL).payload(new Gson().toJson(article)));
 //                    count++;
                 }
             }
         }
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
     }
 
     public static void main(String[] args) {

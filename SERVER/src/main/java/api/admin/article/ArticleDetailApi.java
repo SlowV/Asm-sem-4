@@ -1,6 +1,7 @@
 package api.admin.article;
 
 import com.google.gson.Gson;
+import dto.ArticleDTO;
 import entity.Article;
 import entity.Category;
 import entity.ResponseJson;
@@ -18,7 +19,7 @@ public class ArticleDetailApi extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String articleId = req.getParameter("id");
-
+        System.out.println(articleId);
         if (articleId == null || "".equals(articleId)){
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(ResponseJson.Builder.aResponseJson()
@@ -27,8 +28,7 @@ public class ArticleDetailApi extends HttpServlet {
                     .build().parserToJson());
         }else{
             Article article = ofy().load().type(Article.class).id(articleId).now();
-
-            if (article == null || article.isDeactiveAndDeleted()){
+            if (article == null){
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
                 resp.getWriter().println(ResponseJson.Builder.aResponseJson()
                         .setStatus(HttpServletResponse.SC_BAD_REQUEST)
@@ -39,7 +39,7 @@ public class ArticleDetailApi extends HttpServlet {
                 resp.getWriter().println(ResponseJson.Builder.aResponseJson()
                         .setStatus(HttpServletResponse.SC_OK)
                         .setMessage(StringUtil.SUCCESS_MSG)
-                        .setObj(article)
+                        .setObj(new ArticleDTO(article))
                         .build().parserToJson());
             }
         }

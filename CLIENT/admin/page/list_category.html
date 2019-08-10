@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Tạo mới bài viết</title>
+    <title>Danh sách bài viêt</title>
     <meta name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>
     <link href="./../main.css" rel="stylesheet">
@@ -60,7 +60,7 @@
                         </li>
                         <li class="app-sidebar__heading">Quản lý</li>
                         <li>
-                            <a href="#" class="mm-active">
+                            <a href="#">
                                 <i class="metismenu-icon pe-7s-news-paper"></i>
                                 Bài viêt
                                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
@@ -81,7 +81,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" class="mm-active">
                                 <i class="metismenu-icon pe-7s-folder"></i>
                                 Danh mục
                                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
@@ -128,62 +128,50 @@
         </div>
         <div class="app-main__outer">
             <div class="app-main__inner">
-                <div class="main-card mb-3 card">
-                    <div class="card-body"><h5 class="card-title">Thêm mới bài viết</h5>
-                        <div class="position-relative row form-group">
-                            <label class="col-sm-2 col-form-label">Url</label>
-                            <div class="col-sm-10">
-                                <input name="url" placeholder="Url selector" type="text" class="form-control">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-card mb-3 card">
+                            <div class="card-header">Danh sách danh mục
+                                <div class="btn-actions-pane-right">
+                                    <div role="group" class="btn-group-sm btn-group">
+                                        <button class="btn btn-success bg-mean-fruit" style="border: none">
+                                            <i class="fa fa-plus"></i>
+                                            Thêm mới
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="position-relative row form-group">
-                            <label class="col-sm-2 col-form-label">Title selector</label>
-                            <div class="col-sm-10">
-                                <input name="title" placeholder="Title selector" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="position-relative row form-group">
-                            <label class="col-sm-2 col-form-label">Author selector</label>
-                            <div class="col-sm-10">
-                                <input name="author" placeholder="Author selector" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="position-relative row form-group">
-                            <label class="col-sm-2 col-form-label">Description selector</label>
-                            <div class="col-sm-10">
-                                <input name="description" placeholder="Description selector" type="text"
-                                       class="form-control">
-                            </div>
-                        </div>
-                        <div class="position-relative row form-group">
-                            <label class="col-sm-2 col-form-label">Category</label>
-                            <div class="col-sm-10">
-                                <select name="category" class="form-control">
+                            <div class="table-responsive">
+                                <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center " style="min-width: 50px;">#</th>
+                                        <th class="text-center" style="min-width: 120px">Danh mục</th>
+                                        <th class="text-center" style="min-width: 120px">Trạng thái</th>
+                                        <th class="text-center" style="min-width: 120px">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tbody_data_category">
 
-                                </select>
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                        <div class="position-relative row form-group">
-                            <label class="col-sm-2 col-form-label">Content selector</label>
-                            <div class="col-sm-10">
-                                <input name="content" placeholder="Content selector" type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="position-relative row form-group">
-                            <label class="col-sm-2 col-form-label">Thumbnail selector</label>
-                            <div class="col-sm-10">
-                                <input name="thumbnail" placeholder="Thumbnail selector" type="text"
-                                       class="form-control">
-                            </div>
-                        </div>
-                        <div class="position-relative row form-check">
-                            <div class="col-sm-12 ">
-                                <button type="button" class="btn btn-success float-right" style="min-width: 100px"
-                                        id="btnSubmitArticle">Submit
+                            <div class="d-block text-center card-footer">
+                                <button class="mr-2 btn-icon btn-icon-only btn btn-info float-left"
+                                        style="font-weight: 600;">
+                                    <i class="pe-7s-check btn-icon-wrapper"> </i> Chọn tất cả
                                 </button>
+                                <nav class="float-right">
+                                    <ul class="pagination" style="margin: 0;padding: 0;">
+                                        <li class="page-item"><a class="page-link" href="#">Quay lại</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">Tiếp theo</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -225,90 +213,18 @@
                 </div>
             </div>
         </div>
-        <div type-layout="include" name-lauout="modal">
-
-        </div>
     </div>
 </div>
+
 <script type="text/javascript" src="../assets/scripts/main.js"></script>
 <script src="./../assets/js/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="./../assets/js/include_html.js"></script>
 <script src="../assets/js/app.js"></script>
-<script src="./../assets/js/edit_article_and_show.js"></script>
-<script src="./../assets/ckeditor/ckeditor.js"></script>
+<script src="./../assets/js/category/list_category.js"></script>
 <script>
 
-    $(document).ready(function () {
-        $.ajax({
-            url: URL_GET_CATEGORIES + '?id=1',
-            method: 'GET',
-            type: 'application/json',
-            success: function (data) {
-                if (data.status === 200) {
-                    let content = '';
-
-                    for (let i = 0; i < data.obj.length; i++) {
-                        content += '<option value="' + data.obj[i].id + '">' +
-                            data.obj[i].name +
-                            '</option>';
-                    }
-                    $('select[name="category"]').html(content);
-                }
-            }, error: function (msg) {
-                console.log(msg);
-            }
-        });
-
-        $('#btnSubmitArticle').click(function () {
-            let url = $('input[name="url"]').val();
-            let title = $('input[name="title"]').val();
-            let author = $('input[name="author"]').val();
-            let categoryID = $('select[name="category"] option:checked').attr("value");
-            let content = $('input[name="content"]').val();
-            let thumbnail = $('input[name="thumbnail"]').val();
-            let description = $('input[name="description"]').val();
-
-            let dataPOST = {
-                "url": url,
-                "title": title,
-                "author": author,
-                "categoryId": categoryID,
-                "content": content,
-                "thumbnail": thumbnail,
-                "description": description
-            };
-            console.log(JSON.stringify(dataPOST));
-
-            $.ajax({
-                type: 'application/json',
-                url: URL_POST_ARTICLE,
-                method: 'POST',
-                data: JSON.stringify(dataPOST),
-                success: function (data) {
-                    if (data.status === 200) {
-                        let title = data.obj.title;
-                        let description = data.obj.description;
-                        let content = data.obj.content;
-                        let author = data.obj.author;
-                        let img = data.obj.thumbnail;
-                        let cateId = data.obj.categoryId;
-                        let urlPre = data.obj.url;
-                        let categoryName = data.obj.categoryName;
-                        setValuePreviewArticle(title, description, content, author, img, cateId, categoryName, urlPre);
-                        $('#modalPreviewArticle').modal({
-                            backdrop: false
-                        });
-                    }
-                },
-                error: function (msg) {
-                    console.log(msg);
-                }
-            });
-        });
-
-    });
 </script>
 </body>
 </html>

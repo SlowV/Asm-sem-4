@@ -2,27 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ae28cc8-23ef-49fc-a3a4-8f4660f2b8b0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/page/create_category.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CLIENT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CLIENT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/js/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/js/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/page/create_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/page/create_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/page/list_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/admin/page/list_article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/datastore-indexes-auto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/local_db.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/local_db.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/article/ArticleApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/article/ArticleApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/dto/ArticleDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/dto/ArticleDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/ArticleTypeToJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/entity/ArticleTypeToJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/article/ArticleDetailApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/admin/article/ArticleDetailApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/crawler/AddTaskToQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/crawler/AddTaskToQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/crawler/GetTaskToQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/api/crawler/GetTaskToQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/lang/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/lang/vi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/util/StringUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/cron.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/cron.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/queue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/queue.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/out/artifacts/ASM_GAE_war_exploded/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/api/admin/article/ArticleApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/api/admin/article/ArticleApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/dto/ArticleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/dto/ArticleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/entity/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/entity/ArticleTypeToJSON.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/entity/ArticleTypeToJSON.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/api/admin/article/ArticleDetailApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/api/admin/article/ArticleDetailApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/api/crawler/AddTaskToQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/api/crawler/AddTaskToQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/api/crawler/GetTaskToQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/api/crawler/GetTaskToQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/java/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/src/main/java/util/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/resources/lang/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/src/main/resources/lang/vi.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/api/admin/article/ArticleApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/api/admin/article/ArticleApi.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/dto/ArticleDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/dto/ArticleDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/entity/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/entity/ArticleTypeToJSON.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/entity/ArticleTypeToJSON.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/api/admin/article/ArticleDetailApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/api/admin/article/ArticleDetailApi.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/api/crawler/AddTaskToQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/api/crawler/AddTaskToQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/api/crawler/GetTaskToQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/api/crawler/GetTaskToQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/lang/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/lang/vi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/target/classes/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/target/classes/util/StringUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/web/WEB-INF/cron.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/web/WEB-INF/cron.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERVER/web/WEB-INF/queue.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/web/WEB-INF/queue.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERVER/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SERVER/web/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,10 +50,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/assets/js/api.js">
+        <entry file="file://$PROJECT_DIR$/admin/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="30" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="30" />
+            <state relative-caret-position="281">
+              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,33 +64,73 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/page/create_article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="215" column="64" selection-start-line="215" selection-start-column="64" selection-end-line="215" selection-end-column="64" />
+            <state relative-caret-position="536">
+              <caret line="187" column="22" selection-start-line="130" selection-start-column="16" selection-end-line="187" selection-end-column="22" />
               <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#17208#17215#1" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#17094#17760#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/page/create_category.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/page/list_article.html">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="238" column="7" lean-forward="true" selection-start-line="238" selection-start-column="7" selection-end-line="238" selection-end-column="7" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/assets/js/include_html.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="108" column="108" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="108" />
+              <folding>
+                <element signature="e#465#472#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/page/list_category.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="153" column="66" selection-start-line="153" selection-start-column="47" selection-end-line="153" selection-end-column="66" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/index.html">
+        <entry file="file://$PROJECT_DIR$/admin/assets/js/lang/language.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="163" column="32" lean-forward="true" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
-              <folding>
-                <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -81,8 +140,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -92,11 +152,13 @@
       <find>app-header</find>
       <find>.search-wrapper .input-holder .search-icon span</find>
       <find>app-page-title</find>
-      <find>\n</find>
       <find />
       <find>scale(NaN)</find>
       <find>scale()</find>
       <find>Translate</find>
+      <find />
+      <find>.modal</find>
+      <find>\n</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,9 +171,19 @@
         <option value="$PROJECT_DIR$/admin/assets/js/URL_API.js" />
         <option value="$PROJECT_DIR$/admin/assets/scripts/main.js" />
         <option value="$PROJECT_DIR$/admin/assets/js/api.js" />
+        <option value="$PROJECT_DIR$/admin/assets/js/get_article_detail.js" />
+        <option value="$PROJECT_DIR$/admin/assets/css/slv_css.css" />
+        <option value="$PROJECT_DIR$/admin/assets/js/edit_article_and_show.js" />
         <option value="$PROJECT_DIR$/admin/page/list_article.html" />
+        <option value="$PROJECT_DIR$/admin/assets/js/get_list_article.js" />
+        <option value="$PROJECT_DIR$/admin/page/list_category.html" />
         <option value="$PROJECT_DIR$/admin/page/create_article.html" />
+        <option value="$PROJECT_DIR$/admin/page/create_category.html" />
+        <option value="$PROJECT_DIR$/admin/assets/js/category/list_category.js" />
+        <option value="$PROJECT_DIR$/admin/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/admin/assets/js/include_html.js" />
         <option value="$PROJECT_DIR$/admin/index.html" />
+        <option value="$PROJECT_DIR$/admin/assets/js/lang/language.js" />
       </list>
     </option>
   </component>
@@ -172,14 +244,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565416710651" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565431369060" />
+    <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\trinh\OneDrive\Máy tính\CODE\ASM_sem4\CLIENT\admin\page" />
       <recent name="C:\Users\trinh\OneDrive\Máy tính\CODE\ASM_sem4\CLIENT\admin\assets" />
       <recent name="C:\Users\trinh\OneDrive\Máy tính\CODE\ASM_sem4\CLIENT\admin\assets\js" />
       <recent name="C:\Users\trinh\OneDrive\Máy tính\CODE\ASM_sem4\CLIENT\admin" />
@@ -211,12 +286,12 @@
       <workItem from="1565190236521" duration="3336000" />
       <workItem from="1565243412820" duration="14415000" />
       <workItem from="1565259757599" duration="664000" />
-      <workItem from="1565406570375" duration="9643000" />
+      <workItem from="1565406570375" duration="23248000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31990000" />
+    <option name="totallyTimeSpent" value="45595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -279,38 +354,125 @@
     <entry file="file://$PROJECT_DIR$/admin/assets/ckeditor/lang/af.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/assets/js/api.js">
+    <entry file="file://$PROJECT_DIR$/admin/assets/css/slv_css.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="30" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="30" />
+        <state relative-caret-position="383">
+          <caret line="42" column="15" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/page/create_article.html">
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/edit_article_and_show.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="215" column="64" selection-start-line="215" selection-start-column="64" selection-end-line="215" selection-end-column="64" />
-          <folding>
-            <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#17208#17215#1" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#17094#17760#0" />
-          </folding>
+        <state relative-caret-position="1037">
+          <caret line="61" column="13" lean-forward="true" selection-start-line="61" selection-end-line="61" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/page/list_article.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/index.html">
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/get_article_detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="163" column="32" lean-forward="true" selection-start-line="163" selection-start-column="32" selection-end-line="163" selection-end-column="32" />
+        <state relative-caret-position="391">
+          <caret line="23" column="19" lean-forward="true" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/page/create_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/get_list_article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="52" column="40" lean-forward="true" selection-start-line="50" selection-start-column="27" selection-end-line="52" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/category/list_category.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/page/create_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="187" column="22" selection-start-line="130" selection-start-column="16" selection-end-line="187" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/page/list_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="238" column="7" lean-forward="true" selection-start-line="238" selection-start-column="7" selection-end-line="238" selection-end-column="7" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/include_html.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="108" column="108" selection-start-line="108" selection-start-column="108" selection-end-line="108" selection-end-column="108" />
+          <folding>
+            <element signature="e#465#472#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/page/list_category.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="153" column="66" selection-start-line="153" selection-start-column="47" selection-end-line="153" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#nav#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="146" column="41" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/assets/js/lang/language.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
         </state>
       </provider>
     </entry>

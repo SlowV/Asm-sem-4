@@ -175,8 +175,13 @@ public class ArticleApi extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Article article = new Gson().fromJson(StringUtil.convertInputStreamToString(req.getInputStream()), Article.class);
-        Article articleExist = ofy().load().type(Article.class).id(article.getUrl()).now();
+        String id = "example";
+        try{
+            id = req.getParameter("id");
+        }catch (Exception ex){
+            LOGGER.log(Level.WARNING, ex.getMessage());
+        }
+        Article articleExist = ofy().load().type(Article.class).id(id).now();
         if (articleExist == null) {
             resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             resp.getWriter().println(ResponseJson.Builder.aResponseJson()
@@ -185,6 +190,7 @@ public class ArticleApi extends HttpServlet {
                     .setObj(String.format(StringUtil.NOT_FOUND_MSG, "Bai viet"))
                     .build().parserToJson());
         }
+        assert articleExist != null;
         ofy().save().entity(articleExist.setStatus(Article.Status.DELETED.getCode()));
         resp.setStatus(HttpServletResponse.SC_OK);
         resp.getWriter().println(ResponseJson.Builder.aResponseJson()

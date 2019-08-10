@@ -1,0 +1,12 @@
+{
+  "en": {
+    "trang.chu": "Home",
+    "quan.ly": "Manager",
+    "bai.viet": "Article"
+  },
+  "vi" : {
+    "trang.chu": "Trang chủ",
+    "quan.ly": "Quản lý",
+    "bai.viet": "Bài viêt"
+  }
+}

@@ -5,6 +5,18 @@
          version="2.5">
 
     <!--====================== SERVLET =============================-->
+
+    <!-- LANGUAGE -->
+    <!--Get language-->
+    <servlet>
+        <servlet-name>LanguageApi</servlet-name>
+        <servlet-class>api.lang.LanguageApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LanguageApi</servlet-name>
+        <url-pattern>/api/v1/language</url-pattern>
+    </servlet-mapping>
+
     <!--ACCOUNT-->
     <!--Login-->
     <servlet>
@@ -48,6 +60,7 @@
         <url-pattern>/api/v1/article/detail</url-pattern>
     </servlet-mapping>
 
+    <!--Create article-->
     <servlet>
         <servlet-name>ArticleCreateApi</servlet-name>
         <servlet-class>api.admin.article.ArticleApi</servlet-class>
@@ -55,6 +68,15 @@
     <servlet-mapping>
         <servlet-name>ArticleCreateApi</servlet-name>
         <url-pattern>/api/v1/article/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ArticleDelete</servlet-name>
+        <servlet-class>api.admin.article.ArticleApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ArticleDelete</servlet-name>
+        <url-pattern>/api/v1/article/delete</url-pattern>
     </servlet-mapping>
 
     <!--Auto active article-->
