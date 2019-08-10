@@ -2,11 +2,40 @@
   "en": {
     "trang.chu": "Home",
     "quan.ly": "Manager",
-    "bai.viet": "Article"
+    "bai.viet": "Article",
+    "danh.muc": "Category",
+    "them.moi": "Add new",
+    "danh.sach": "List",
+    "bai.viet.hien.co": "Available Article",
+    "danh.muc.hien.co": "Available Category",
+    "ngon.ngu": "Language",
+    "source.hien.co" : "Available Source",
+    "bai.viet.chua.duyet": "Article status deactive",
+    "tu.dong.duyet.12h":"Auto active at 12h",
+    "moi.nhat": "New",
+    "trang.thai": "Status",
+    "ten.bai.viet": "Article name",
+    "chon.tat.ca": "Check all",
+    "quay.lai": "Back",
+    "tiep.theo": "Next"
   },
   "vi" : {
     "trang.chu": "Trang chủ",
     "quan.ly": "Quản lý",
-    "bai.viet": "Bài viêt"
+    "bai.viet": "Bài viêt",
+    "danh.muc": "Danh mục",
+    "them.moi": "Thêm mới",
+    "danh.sach": "Danh sách",
+    "bai.viet.hien.co": "Bài viết hiện có",
+    "danh.muc.hien.co": "Danh mục hiện có",
+    "ngon.ngu": "Ngôn ngữ",
+    "source.hien.co" : "Source hiện có",
+    "bai.viet.chua.duyet": "Bài viết chưa duyệt",
+    "tu.dong.duyet.12h": "Tự động duyệt bài sau 12h",
+    "new": "Mới nhất",
+    "ten.bai.viet": "Tên bài viết",
+    "chon.tat.ca": "Chọn tất cả",
+    "quay.lai": "Quay lại",
+    "tiep.theo": "Tiếp theo"
   }
 }
