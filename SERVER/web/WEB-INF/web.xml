@@ -77,6 +77,17 @@
         <url-pattern>/article/active</url-pattern>
     </servlet-mapping>
 
+    <!-- List Article-->
+    <servlet>
+        <servlet-name>SaveSpecialContentApi</servlet-name>
+        <servlet-class>api.admin.article.SaveSpecialContentApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SaveSpecialContentApi</servlet-name>
+        <url-pattern>/api/v1/article/special/save</url-pattern>
+    </servlet-mapping>
+
+
     <!-- CATEGORY -->
     <!--List Category-->
     <servlet>

@@ -40,7 +40,7 @@ public class Article {
         long now = Calendar.getInstance().getTimeInMillis();
         this.createdAtMLS = now;
         this.updatedAtMLS = now;
-        this.status = Category.Status.ACTIVE.getCode();
+        this.status = Category.Status.DEACTIVE.getCode();
     }
 
     public enum Status {

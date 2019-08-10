@@ -21,6 +21,49 @@
     * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
     -->
     <link href="./../main.css" rel="stylesheet">
+    <style>
+        .modal-content {
+            margin-top: 70px;
+            overflow-y: auto;
+        }
+
+        .slv_label_preview {
+            display: none;
+            transition: display .5s;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .slv_label_preview.active {
+            display: block;
+        }
+
+        .slv_input_preview {
+            font-size: 15px;
+            border: 1px solid #5d5d5d;
+            transition: .5s;
+            font-weight: 400;
+            height: auto;
+        }
+
+        .slv_input_preview:disabled {
+            border: none;
+            outline: none;
+            transition: .5s;
+            background: #fff;
+
+        }
+
+        .slv_input_preview#titlePre:disabled {
+            font-weight: 600;
+            font-size: 25px;
+        }
+
+        textarea#contentPre {
+            min-height: 350px;
+        }
+
+    </style>
 </head>
 <body>
 <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
@@ -150,7 +193,7 @@
                     <ul class="vertical-nav-menu">
                         <li class="app-sidebar__heading">Dashboards</li>
                         <li>
-                            <a href="index.html" class="mm-active">
+                            <a href="./../index.html" class="mm-active">
                                 <i class="metismenu-icon pe-7s-home"></i>
                                 Trang chủ
                             </a>
@@ -164,13 +207,13 @@
                             </a>
                             <ul>
                                 <li>
-                                    <a href="elements-buttons-standard.html">
+                                    <a href="./create_article.html">
                                         <i class="metismenu-icon"></i>
                                         Thêm mới
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="elements-dropdowns.html">
+                                    <a href="./list_article.html">
                                         <i class="metismenu-icon"></i>
                                         Danh sách
                                     </a>
@@ -227,7 +270,6 @@
             <div class="app-main__inner">
                 <div class="main-card mb-3 card">
                     <div class="card-body"><h5 class="card-title">Thêm mới bài viết</h5>
-
                         <div class="position-relative row form-group">
                             <label class="col-sm-2 col-form-label">Url</label>
                             <div class="col-sm-10">
@@ -249,7 +291,8 @@
                         <div class="position-relative row form-group">
                             <label class="col-sm-2 col-form-label">Description selector</label>
                             <div class="col-sm-10">
-                                <input name="description" placeholder="Description selector" type="text" class="form-control">
+                                <input name="description" placeholder="Description selector" type="text"
+                                       class="form-control">
                             </div>
                         </div>
                         <div class="position-relative row form-group">
@@ -322,11 +365,61 @@
                 </div>
             </div>
         </div>
+
+        <div class="modal fade bd-example-modal-lg" id="modalPreviewArticle" tabindex="-1" role="dialog"
+             aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="urlPre">
+                        <div class="form-group">
+                            <label class="col-form-label slv_label_preview">Title</label>
+                            <input type="text" class="form-control slv_input_preview" disabled id="titlePre">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label slv_label_preview">Description</label>
+                            <input class="form-control slv_input_preview" disabled id="descriptionPre">
+                        </div>
+                        <div class="form-group p-2">
+                            <span class="categoryIdPew"></span>
+                        </div>
+                        <div class="form-group">
+                            <img src="" id="thumbnailPre" alt="" style="width: 100%;height: auto;">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label slv_label_preview">Content</label>
+                            <textarea onkeyup="textAreaAdjust(this)" rows="10" name="contentPre"
+                                      class="form-control slv_input_preview" disabled
+                                      id="contentPre"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label slv_label_preview">Author</label>
+                            <input class="form-control slv_input_preview" disabled id="authorPre">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-info" id="btn-preview">Preview</button>
+                        <button type="button" class="btn btn-warning" id="btn-edit-article-preview">Edit</button>
+
+                        <button type="button" class="btn btn-primary" id="btn-save-article">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     </div>
 </div>
 <script type="text/javascript" src="../assets/scripts/main.js"></script>
 <script src="./../assets/js/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="./../assets/js/api.js"></script>
 <script src="./../assets/ckeditor/ckeditor.js"></script>
 <script>
@@ -353,39 +446,112 @@
             }
         });
 
-
         $('#btnSubmitArticle').click(function () {
             let url = $('input[name="url"]').val();
             let title = $('input[name="title"]').val();
             let author = $('input[name="author"]').val();
-            let categoryId = $('select[name="category"] option:checked').attr("value");
+            let categoryID = $('select[name="category"] option:checked').attr("value");
             let content = $('input[name="content"]').val();
             let thumbnail = $('input[name="thumbnail"]').val();
             let description = $('input[name="description"]').val();
 
-            let data = {
+            let dataPOST = {
                 "url": url,
                 "title": title,
                 "author": author,
-                "categoryId": categoryId,
+                "categoryId": categoryID,
                 "content": content,
-                "image": thumbnail,
-                "description" : description
+                "thumbnail": thumbnail,
+                "description": description
             };
-            console.log(JSON.stringify(data));
+            console.log(JSON.stringify(dataPOST));
+
             $.ajax({
                 type: 'application/json',
                 url: URL_POST_ARTICLE,
                 method: 'POST',
-                data: JSON.stringify(data),
+                data: JSON.stringify(dataPOST),
                 success: function (data) {
-                    console.log(data);
+                    if (data.status === 200) {
+                        let title = data.obj.title;
+                        let description = data.obj.description;
+                        let content = data.obj.content;
+                        let author = data.obj.author;
+                        let img = data.obj.thumbnail;
+                        let cateId = data.obj.categoryId;
+                        let urlPre = data.obj.url;
+                        let categoryName = data.obj.categoryName;
+                        setValuePreviewArticle(title, description, content, author, img, cateId, categoryName, urlPre);
+                        $('#modalPreviewArticle').modal({
+                            backdrop: false
+                        });
+                    }
                 },
                 error: function (msg) {
                     console.log(msg);
                 }
             });
         });
+
+        function setValuePreviewArticle(title, description, content, author, img, categoryId, categoryName, url) {
+            $('#modalTitle').html(title);
+            $('#titlePre').val(title);
+            $('#descriptionPre').val(description);
+            $('#contentPre').html(content);
+            $('#thumbnailPre').attr({
+                'src': img,
+                'alt': title
+            });
+
+            console.log("title:" + title + " content: " + content + " description:  " + description + " img: " + img);
+
+            $('#authorPre').val(author);
+            $('.categoryIdPew').html('<div id="' + categoryId + '"> Category: ' + categoryName + '</div>');
+            $('input[type="hidden"]#urlPre').val(url);
+        }
+
+        $('#btn-edit-article-preview').click(function () {
+            $('.slv_input_preview').attr('disabled', false);
+            $('.slv_label_preview').addClass('active');
+            CKEDITOR.replace('contentPre');
+        });
+
+        $('#btn-save-article').click(function () {
+            // alert($('.categoryIdPew').find('div').attr('id'));
+            let dataPOST = {
+                url: $('input[type="hidden"]#urlPre').val(),
+                title: $('#titlePre').val(),
+                description: $('#descriptionPre').val(),
+                content: $('#contentPre').html(),
+                author: $('#authorPre').val(),
+                thumbnail: $('#thumbnailPre').attr('src'),
+                categoryId: $('.categoryIdPew').find('div').attr('id')
+            };
+            $.ajax({
+                url: URL_POST_SPECIAL_ARTICLE,
+                method: 'POST',
+                type: 'application/json',
+                data: JSON.stringify(dataPOST),
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (msg) {
+                    console.log(msg);
+                }
+            })
+        });
+
+        $('#btn-preview').click(function () {
+            $('.slv_input_preview').attr('disabled', true);
+            $('.slv_label_preview').removeClass('active');
+            CKEDITOR.instances["contentPre"].destroy(true);
+        });
+
+        function textAreaAdjust(o) {
+            o.style.height = "1px";
+            o.style.height = (25 + o.scrollHeight) + "px";
+        }
+
     });
 </script>
 </body>

@@ -43,6 +43,7 @@ public class ArticleDTO {
         this.description = article.getDescription();
         this.author = article.getAuthor();
         this.image = article.getThumbnail();
+        this.thumbnail = article.getThumbnail();
         this.status = article.getStatus();
     }
 

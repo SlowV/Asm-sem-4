@@ -72,16 +72,19 @@ public class ArticleApi extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        ArticleDTO article = new Gson().fromJson(StringUtil.convertInputStreamToString(req.getInputStream()), ArticleDTO.class);
-        System.out.println(article.toString());
+        ArticleTypeToJSON article = new Gson().fromJson(StringUtil.convertInputStreamToString(req.getInputStream()), ArticleTypeToJSON.class);
         Document document = Jsoup.connect(article.getUrl()).ignoreContentType(true).get();
+//        System.out.println(document.html());
         String title = document.select(article.getTitle()).text();
         String description = document.select(article.getDescription()).text();
         String content = document.select(article.getContent()).text() ;
         String author = document.select(article.getAuthor()).text();
-        String thumbnail = document.select(article.getImage()).attr("src").trim();
+        String thumbnail = document.select(article.getThumbnail()).attr("src").trim();
         long categoryId = article.getCategoryId();
-        if (content.isEmpty() || title.isEmpty() || description.isEmpty()) return;
+        if (content.isEmpty() || title.isEmpty() || description.isEmpty()){
+            System.out.println("Moi thu deu null");
+            return;
+        }
         if (thumbnail.isEmpty()) {
             thumbnail = "https://resources.overdrive.com/wp-content/uploads/doc-thmb.jpg";
         }
@@ -96,19 +99,25 @@ public class ArticleApi extends HttpServlet {
                     .setMessage(StringUtil.INVALID_MSG)
                     .setObj(String.format(StringUtil.NOT_FOUND_MSG, "Danh muc"))
                     .build().parserToJson());
+            return;
         }
-        assert categoryExist != null;
-        article.setTitle(title).setDescription(description).setContent(content)
-                .setAuthor(author).setImage(thumbnail).setStatus(Article.Status.DEACTIVE.getCode())
-                .setCreatedAtMLS(Calendar.getInstance().getTimeInMillis()).setUpdatedAtMLS(Calendar.getInstance().getTimeInMillis())
-                .setCategoryId(categoryId);
-        LOGGER.info(article.toString());
+        Article articleResult = Article.Builder.anArticle()
+                .setUrl(article.getUrl())
+                .setTitle(title)
+                .setThumbnail(thumbnail)
+                .setDescription(description)
+                .setContent(content)
+                .setStatus(Article.Status.DEACTIVE.getCode())
+                .setCategory(Ref.create(Key.create(Category.class ,categoryId)))
+                .setAuthor(author)
+                .build();
+        LOGGER.info(articleResult.toString());
 
-        resp.setStatus(HttpServletResponse.SC_CREATED);
+        resp.setStatus(HttpServletResponse.SC_OK);
         resp.getWriter().println(ResponseJson.Builder.aResponseJson()
-                .setStatus(HttpServletResponse.SC_CREATED)
+                .setStatus(HttpServletResponse.SC_OK)
                 .setMessage(StringUtil.SUCCESS_MSG)
-                .setObj(article)
+                .setObj(new ArticleDTO(articleResult))
                 .build().parserToJson());
     }
 
