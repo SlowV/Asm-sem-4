@@ -5,6 +5,18 @@
          version="2.5">
 
     <!--====================== SERVLET =============================-->
+    <!-- SEARCH -->
+    <!--search-->
+    <servlet>
+        <servlet-name>SearchApi</servlet-name>
+        <servlet-class>api.admin.filterApi.SearchApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchApi</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+
+
 
     <!-- LANGUAGE -->
     <!--Get language-->

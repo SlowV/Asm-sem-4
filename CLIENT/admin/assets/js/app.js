@@ -1,6 +1,6 @@
 // BASE URL
-// const BASE_URL = "https://crawler-dot-crawldata-248604.appspot.com/";
-const BASE_URL = "http://localhost:8080/";
+const BASE_URL = "https://crawler-dot-crawldata-248604.appspot.com/";
+// const BASE_URL = "http://localhost:8080/";
 
 // Article api
 const URL_GET_LIST_ARTICLE = BASE_URL + "api/v1/articles";

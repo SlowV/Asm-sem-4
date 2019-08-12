@@ -5,6 +5,29 @@
          version="2.5">
 
     <!--====================== SERVLET =============================-->
+    <!-- FILTER API -->
+    <!--Article Filter By Status-->
+    <servlet>
+        <servlet-name>FilterByStatus</servlet-name>
+        <servlet-class>api.admin.article.filter.FilterByStatus</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FilterByStatus</servlet-name>
+        <url-pattern>/api/v1/article/filter/status</url-pattern>
+    </servlet-mapping>
+
+
+
+    <!-- SEARCH -->
+    <!--search-->
+    <servlet>
+        <servlet-name>SearchApi</servlet-name>
+        <servlet-class>api.admin.filterApi.SearchApi</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchApi</servlet-name>
+        <url-pattern>/api/v1/search</url-pattern>
+    </servlet-mapping>
 
     <!-- LANGUAGE -->
     <!--Get language-->

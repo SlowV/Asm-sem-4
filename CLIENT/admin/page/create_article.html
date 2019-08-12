@@ -261,7 +261,7 @@
             }
         });
 
-        $('#btnSubmitArticle').click(function () {
+        divRootModal.on('click', '#btnSubmitArticle', function () {
             let url = $('input[name="url"]').val();
             let title = $('input[name="title"]').val();
             let author = $('input[name="author"]').val();
@@ -306,7 +306,7 @@
                     console.log(msg);
                 }
             });
-        });
+        })
 
     });
 </script>
