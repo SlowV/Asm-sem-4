@@ -23,7 +23,7 @@ public class FilterByDateRange extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         long startDateMLS = convertDateToLong("25/5/1990 00:00:00");
-        long endDateMLS = Calendar.getInstance().getTimeInMillis();
+        long endDateMLS = convertDateToLong(Calendar.getInstance().getTime().toString());
         Query<Article> query = ofy().load().type(Article.class);
         String strStartDate = req.getParameter("startDate");
         String strEndDate = req.getParameter("endDate");

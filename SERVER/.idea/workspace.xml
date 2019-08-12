@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="415b60ff-27ad-46d6-b8f4-1387937d4ffa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Exam4_servlet/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Game_RPG/src/main/java/com/slowv/fxglgames/RPG/CharacterAnimation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../Game_RPG/src/main/java/com/slowv/fxglgames/RPG/RpgApp.java" afterDir="false" />
@@ -74,17 +73,7 @@
       <change afterPath="$PROJECT_DIR$/../../web_pring/src/main/java/annotation/Id.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../web_pring/src/main/java/annotation/Table.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../web_pring/src/main/java/annotation/Unique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CLIENT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CLIENT/admin/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/admin/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CLIENT/admin/page/create_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/admin/page/create_article.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/datastore-indexes-auto.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/datastore-indexes-auto.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/local_db.bin" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/appengine-generated/local_db.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/classes/util/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/ASM_GAE_war_exploded/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/StringUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/api/admin/article/filter/FilterByDateRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/api/admin/article/filter/FilterByDateRange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NewGame/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewGame/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NewGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NewGame/src/main/WEB-INF/js/myJs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../NewGame/src/main/WEB-INF/js/myJs/index.js" afterDir="false" />
@@ -131,8 +120,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/filter/FilterByDateRange.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+            <state relative-caret-position="233">
+              <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -348,6 +337,17 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="article" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SERVER" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SERVER" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
               <item name="filterApi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -424,7 +424,7 @@
     <property name="ACTIVE_CLOUD_PROJECT_NUMBER" value="308750705338" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565618938436" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565618970702" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CLIENT" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -628,12 +628,12 @@
       <workItem from="1565438240900" duration="62000" />
       <workItem from="1565443078670" duration="1770000" />
       <workItem from="1565575779004" duration="8728000" />
-      <workItem from="1565615140480" duration="3776000" />
+      <workItem from="1565615140480" duration="3902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105963000" />
+    <option name="totallyTimeSpent" value="106089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1169,8 +1169,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/api/admin/article/filter/FilterByDateRange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
+        <state relative-caret-position="233">
+          <caret line="25" column="89" selection-start-line="25" selection-start-column="89" selection-end-line="25" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
